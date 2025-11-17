@@ -315,8 +315,8 @@ const more_data = ref([
 const card_data= ref([
   {
     piece_name: "Pawn",
-    image_url: "/icons/pawn.png",
-    modal_image:"/icons/pawn_modal.png",
+    image_url: "/Chess-Verse/icons/pawn.png",
+    modal_image:"/Chess-Verse/icons/pawn_modal.png",
     piece_info: [
       {
         heading: "Movement & Capturing",
@@ -332,8 +332,8 @@ const card_data= ref([
   },
   {
     piece_name: "Knight",
-    image_url: "/icons/knight.png",
-     modal_image:"/icons/knight_modal.png",
+    image_url: "/Chess-Verse/icons/knight.png",
+     modal_image:"/Chess-Verse/icons/knight_modal.png",
     piece_info: [
       {
         heading: "Movement & Capturing",
@@ -349,8 +349,8 @@ const card_data= ref([
   },
   {
     piece_name: "Bishop",
-    image_url: "/icons/bishop.png",
-     modal_image:"/icons/bishop_modal.png",
+    image_url: "/Chess-Verse/icons/bishop.png",
+     modal_image:"/Chess-Verse/icons/bishop_modal.png",
     piece_info: [
       {
         heading: "Movement & Capturing",
@@ -366,8 +366,8 @@ const card_data= ref([
   },
   {
     piece_name: "Rook",
-    image_url: "/icons/rook.png",
-     modal_image:"/icons/rook_modal.png",
+    image_url: "/Chess-Verse/icons/rook.png",
+     modal_image:"/Chess-Verse/icons/rook_modal.png",
     piece_info: [
       {
         heading: "Movement & Capturing",
@@ -383,8 +383,8 @@ const card_data= ref([
   },
   {
     piece_name: "Queen",
-    image_url: "/icons/queen.png",
-     modal_image:"/icons/queen_modal.png",
+    image_url: "/Chess-Verse/icons/queen.png",
+     modal_image:"/Chess-Verse/icons/queen_modal.png",
     piece_info: [
       {
         heading: "Movement & Capturing",
@@ -400,8 +400,8 @@ const card_data= ref([
   },
   {
     piece_name: "King",
-    image_url: "/icons/king.png",
-     modal_image:"/icons/king_modal.png",
+    image_url: "/Chess-Verse/icons/king.png",
+     modal_image:"/Chess-Verse/icons/king_modal.png",
     piece_info: [
       {
         heading: "Movement & Capturing",

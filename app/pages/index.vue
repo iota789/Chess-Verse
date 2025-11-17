@@ -66,7 +66,7 @@ let boardApi;
 
 const cards = ref([
   {
-    image_url: '/icons/rook_piece.png',
+    image_url: '/Chess-Verse/icons/rook_piece.png',
     title: 'The Chess Piece Movement Guide',
     description: 'Learn how each piece moves, captures, and controls the board. The essential first step for any new player.',
     button_label : 'View Guide',
@@ -75,7 +75,7 @@ const cards = ref([
     }
   },
   {
-    image_url: '/icons/strategy.png',
+    image_url: '/Chess-Verse/icons/strategy.png',
     title: 'Mastering the Endgame',
     description: 'Understand the critical concepts of Checkmate, Stalemate, Draws, and when to Resign.',
      button_label : 'Explore Concepts',
@@ -85,7 +85,7 @@ const cards = ref([
     }
   },
   {
-    image_url: '/icons/book.png',
+    image_url: '/Chess-Verse/icons/book.png',
     title: 'Top 6 Chess Openings',
     description: 'Explore the most popular and effective openings to start your games with confidence.',
      button_label : 'Learn Openings',
@@ -98,14 +98,14 @@ const cards = ref([
 
 const skills= ref([
   {
-    image_url:'/icons/puzzle.png',
+    image_url:'/Chess-Verse/icons/puzzle.png',
     title:'Chess Puzzles',
     description:'Sharpen your tactical skills with puzzles ranging from beginner to advanced levels.',
     button_label : 'Solve Puzzles',
     button_url : '/puzzles'
   },
   {
-    image_url:'/icons/bot.png',
+    image_url:'/Chess-Verse/icons/bot.png',
     title:'Play Against Stockfish',
     description:'Practice against computer opponent Stockfish to improve your game.',
     button_label : 'Play a Game',

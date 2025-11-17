@@ -10,12 +10,12 @@
             <!-- <p class="text-black">{{ moves }}</p> -->
               <div class="flex flex-row items-center mt-2">
                 <div v-for="(item,index) in black_captured_pieces">
-                  <img src="/icons/pieces/white/rook.png" v-if="item=='r'"  alt="" class="w-6 h-6" >
-                  <img src="/icons/pieces/white/queen.png" v-if="item=='q'"  alt="" class="w-6 h-6" >
-                  <img src="/icons/pieces/white/king.png" v-if="item=='k'"  alt="" class="w-6 h-6" >
-                  <img src="/icons/pieces/white/knight.png" v-if="item=='n'"  alt="" class="w-6 h-6" >
-                  <img src="/icons/pieces/white/bishop.png" v-if="item=='b'"  alt="" class="w-6 h-6" >
-                  <img src="/icons/pieces/white/pawn.png" v-if="item=='p'"  alt="" class="w-6 h-6" >
+                  <img src="/Chess-Verse/icons/pieces/white/rook.png" v-if="item=='r'"  alt="" class="w-6 h-6" >
+                  <img src="/Chess-Verse/icons/pieces/white/queen.png" v-if="item=='q'"  alt="" class="w-6 h-6" >
+                  <img src="/Chess-Verse/icons/pieces/white/king.png" v-if="item=='k'"  alt="" class="w-6 h-6" >
+                  <img src="/Chess-Verse/icons/pieces/white/knight.png" v-if="item=='n'"  alt="" class="w-6 h-6" >
+                  <img src="/Chess-Verse/icons/pieces/white/bishop.png" v-if="item=='b'"  alt="" class="w-6 h-6" >
+                  <img src="/Chess-Verse/icons/pieces/white/pawn.png" v-if="item=='p'"  alt="" class="w-6 h-6" >
                 </div>
                 
               </div>
@@ -47,12 +47,12 @@
                <div class="flex flex-row items-center">
                 <div v-for="(item,index) in white_captured_pieces">
                   
-                  <img src="/icons/pieces/black/rook.png" v-if="item=='r'"  alt="" class="w-6 h-6" >
-                  <img src="/icons/pieces/black/queen.png" v-if="item=='q'"  alt="" class="w-6 h-6" >
-                  <img src="/icons/pieces/black/king.png" v-if="item=='k'"  alt="" class="w-6 h-6" >
-                  <img src="/icons/pieces/black/knight.png" v-if="item=='n'"  alt="" class="w-6 h-6" >
-                  <img src="/icons/pieces/black/bishop.png" v-if="item=='b'"  alt="" class="w-6 h-6" >
-                  <img src="/icons/pieces/black/pawn.png" v-if="item=='p'"  alt="" class="w-6 h-6" >
+                  <img src="/Chess-Verse/icons/pieces/black/rook.png" v-if="item=='r'"  alt="" class="w-6 h-6" >
+                  <img src="/Chess-Verse/icons/pieces/black/queen.png" v-if="item=='q'"  alt="" class="w-6 h-6" >
+                  <img src="/Chess-Verse/icons/pieces/black/king.png" v-if="item=='k'"  alt="" class="w-6 h-6" >
+                  <img src="/Chess-Verse/icons/pieces/black/knight.png" v-if="item=='n'"  alt="" class="w-6 h-6" >
+                  <img src="/Chess-Verse/icons/pieces/black/bishop.png" v-if="item=='b'"  alt="" class="w-6 h-6" >
+                  <img src="/Chess-Verse/icons/pieces/black/pawn.png" v-if="item=='p'"  alt="" class="w-6 h-6" >
                 </div>
               </div>
           </div>
@@ -351,14 +351,14 @@ const selected_side= ref('')
 const selected_slot= ref('')
 const selected_master= ref({
   name:'R2-D2',
-  image_url : '/icons/r2-d2.jpg',
+  image_url : '/Chess-Verse/icons/r2-d2.jpg',
   timer : 600,
   isTimerRunning:false
 }
 )
 const selected_student= ref({
   name:'C3P0',
-  image_url : '/icons/c3p0.jpg',
+  image_url : '/Chess-Verse/icons/c3p0.jpg',
   timer :600,
   isTimerRunning:false
 })
@@ -366,22 +366,22 @@ const selected_student= ref({
 const masters = ref([
   {
     name:'Yoda',
-    image_url:'/icons/yoda.jpg',
+    image_url:'/Chess-Verse/icons/yoda.jpg',
     side: 'Jedi'
   },{
     name:'Palpatine',
-    image_url:'/icons/palpatine.jpg',
+    image_url:'/Chess-Verse/icons/palpatine.jpg',
     side: 'Sith'
   },
 ])
 const students = ref([
   {
     name:'ObiWan',
-    image_url:'/icons/obiwan.png',
+    image_url:'/Chess-Verse/icons/obiwan.png',
     side: 'Jedi'
   },{
     name:'Anakin',
-    image_url : '/icons/anakin.jpg',
+    image_url : '/Chess-Verse/icons/anakin.jpg',
     side:'Sith'
   }
 ])
@@ -403,11 +403,11 @@ const white_captured_pieces = ref([])
 const game_over_dialog= ref(false)
 const sides = ref([
   {
-  img_url:'/icons/jedi.png',
+  img_url:'/Chess-Verse/icons/jedi.png',
   side_name:'Jedi'
 },
   {
-  img_url:'/icons/sith.png',
+  img_url:'/Chess-Verse/icons/sith.png',
   side_name:'Sith'
 }
 ])
