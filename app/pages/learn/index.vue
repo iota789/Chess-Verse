@@ -201,6 +201,7 @@ let boardApi;
 const showDialog=ref(false)
 const route = useRoute()
 const showOpeningDialog=ref(false)
+const base = useRuntimeConfig().app.baseURL
 const selected_data= ref({})
 const selected_opening = ref({})
 const boardConfig = ref({
@@ -315,8 +316,8 @@ const more_data = ref([
 const card_data= ref([
   {
     piece_name: "Pawn",
-    image_url: `${useAppConfig().baseURL}icons/pawn.png`,
-    modal_image:`${useAppConfig().baseURL}icons/pawn_modal.png`,
+    image_url: `${base}/icons/pawn.png`,
+    modal_image:`${base}/icons/pawn_modal.png`,
     piece_info: [
       {
         heading: "Movement & Capturing",
@@ -332,8 +333,8 @@ const card_data= ref([
   },
   {
     piece_name: "Knight",
-    image_url: `${useAppConfig().baseURL}icons/knight.png`,
-     modal_image:`${useAppConfig().baseURL}icons/knight_modal.png`,
+    image_url: `${base}/icons/knight.png`,
+     modal_image:`${base}/icons/knight_modal.png`,
     piece_info: [
       {
         heading: "Movement & Capturing",
@@ -349,8 +350,8 @@ const card_data= ref([
   },
   {
     piece_name: "Bishop",
-    image_url: `${useAppConfig().baseURL}icons/bishop.png`,
-     modal_image:`${useAppConfig().baseURL}icons/bishop_modal.png`,
+    image_url: `${base}/icons/bishop.png`,
+     modal_image:`${base}/icons/bishop_modal.png`,
     piece_info: [
       {
         heading: "Movement & Capturing",
@@ -366,8 +367,8 @@ const card_data= ref([
   },
   {
     piece_name: "Rook",
-    image_url: `${useAppConfig().baseURL}icons/rook.png`,
-     modal_image:`${useAppConfig().baseURL}icons/rook_modal.png`,
+    image_url: `${base}/icons/rook.png`,
+     modal_image:`${base}/icons/rook_modal.png`,
     piece_info: [
       {
         heading: "Movement & Capturing",
@@ -383,8 +384,8 @@ const card_data= ref([
   },
   {
     piece_name: "Queen",
-    image_url: `${useAppConfig().baseURL}icons/queen.png`,
-     modal_image:`${useAppConfig().baseURL}/queen_modal.png`,
+    image_url: `${base}/icons/queen.png`,
+     modal_image:`${base}//queen_modal.png`,
     piece_info: [
       {
         heading: "Movement & Capturing",
@@ -400,8 +401,8 @@ const card_data= ref([
   },
   {
     piece_name: "King",
-    image_url:  `${useAppConfig().baseURL}icons/king.png`,
-     modal_image:`${useAppConfig().baseURL}icons/king_modal.png`,
+    image_url:  `${base}/icons/king.png`,
+     modal_image:`${base}/icons/king_modal.png`,
     piece_info: [
       {
         heading: "Movement & Capturing",
