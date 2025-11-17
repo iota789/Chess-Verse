@@ -315,8 +315,8 @@ const more_data = ref([
 const card_data= ref([
   {
     piece_name: "Pawn",
-    image_url: "/icons/pawn.png",
-    modal_image:"/icons/pawn_modal.png",
+    image_url: `${useAppConfig().baseURL}icons/pawn.png`,
+    modal_image:`${useAppConfig().baseURL}icons/pawn_modal.png`,
     piece_info: [
       {
         heading: "Movement & Capturing",
@@ -332,8 +332,8 @@ const card_data= ref([
   },
   {
     piece_name: "Knight",
-    image_url: "/icons/knight.png",
-     modal_image:"/icons/knight_modal.png",
+    image_url: `${useAppConfig().baseURL}icons/knight.png`,
+     modal_image:`${useAppConfig().baseURL}icons/knight_modal.png`,
     piece_info: [
       {
         heading: "Movement & Capturing",
@@ -349,8 +349,8 @@ const card_data= ref([
   },
   {
     piece_name: "Bishop",
-    image_url: "/icons/bishop.png",
-     modal_image:"/icons/bishop_modal.png",
+    image_url: `${useAppConfig().baseURL}icons/bishop.png`,
+     modal_image:`${useAppConfig().baseURL}icons/bishop_modal.png`,
     piece_info: [
       {
         heading: "Movement & Capturing",
@@ -366,8 +366,8 @@ const card_data= ref([
   },
   {
     piece_name: "Rook",
-    image_url: "/icons/rook.png",
-     modal_image:"/icons/rook_modal.png",
+    image_url: `${useAppConfig().baseURL}icons/rook.png`,
+     modal_image:`${useAppConfig().baseURL}icons/rook_modal.png`,
     piece_info: [
       {
         heading: "Movement & Capturing",
@@ -383,8 +383,8 @@ const card_data= ref([
   },
   {
     piece_name: "Queen",
-    image_url: "/icons/queen.png",
-     modal_image:"/icons/queen_modal.png",
+    image_url: `${useAppConfig().baseURL}icons/queen.png`,
+     modal_image:`${useAppConfig().baseURL}/queen_modal.png`,
     piece_info: [
       {
         heading: "Movement & Capturing",
@@ -400,8 +400,8 @@ const card_data= ref([
   },
   {
     piece_name: "King",
-    image_url: "/icons/king.png",
-     modal_image:"/icons/king_modal.png",
+    image_url:  `${useAppConfig().baseURL}icons/king.png`,
+     modal_image:`${useAppConfig().baseURL}icons/king_modal.png`,
     piece_info: [
       {
         heading: "Movement & Capturing",

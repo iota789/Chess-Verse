@@ -4,13 +4,13 @@
       <h1 class="text-3xl  lg:text-6xl text-center font-bold text-black">Master the Game of Kings</h1>
       <p class=" text-md lg:text-lg text-center  text-black">Step into the world of chess strategy. Master the foundations and uncover the deeper tactics that shape the game</p>
      
-      <div class="w-auto h-auto border-2 rounded-xl border-black p-3 mt-6">
+      <div class="w-auto h-auto border-2 rounded-xl border-black p-1 md:p-3 mt-6">
 
       
       <TheChessboard 
         :config="boardConfig" 
         @board-created="(ev)=>{boardCreated(ev);}"
-        class="!w-96 !h-96  rounded-lg shadow-lg " />
+        class=" !w-64 !h-64 lg:!w-96 lg:!h-96  rounded-lg shadow-lg " />
 
       </div>
       <p class="text-black text-center text-sm lg:text-lg">{{ game_name }}</p>
@@ -66,7 +66,7 @@ let boardApi;
 
 const cards = ref([
   {
-    image_url: '/icons/rook_piece.png',
+    image_url: `${useAppConfig().baseURL}icons/rook_piece.png`,
     title: 'The Chess Piece Movement Guide',
     description: 'Learn how each piece moves, captures, and controls the board. The essential first step for any new player.',
     button_label : 'View Guide',
@@ -75,7 +75,7 @@ const cards = ref([
     }
   },
   {
-    image_url: '/icons/strategy.png',
+    image_url: `${useAppConfig().baseURL}icons/strategy.png`,
     title: 'Mastering the Endgame',
     description: 'Understand the critical concepts of Checkmate, Stalemate, Draws, and when to Resign.',
      button_label : 'Explore Concepts',
@@ -85,7 +85,7 @@ const cards = ref([
     }
   },
   {
-    image_url: '/icons/book.png',
+    image_url: `${useAppConfig().baseURL}icons/book.png`,
     title: 'Top 6 Chess Openings',
     description: 'Explore the most popular and effective openings to start your games with confidence.',
      button_label : 'Learn Openings',
@@ -98,14 +98,14 @@ const cards = ref([
 
 const skills= ref([
   {
-    image_url:'/icons/puzzle.png',
+    image_url:`${useAppConfig().baseURL}icons/puzzle.png`,
     title:'Chess Puzzles',
     description:'Sharpen your tactical skills with puzzles ranging from beginner to advanced levels.',
     button_label : 'Solve Puzzles',
     button_url : '/puzzles'
   },
   {
-    image_url:'/icons/bot.png',
+    image_url:`${useAppConfig().baseURL}icons/bot.png`,
     title:'Play Against Stockfish',
     description:'Practice against computer opponent Stockfish to improve your game.',
     button_label : 'Play a Game',

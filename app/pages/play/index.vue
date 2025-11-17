@@ -337,7 +337,6 @@
 <script setup>
 import { TheChessboard } from 'vue3-chessboard';
 import { Engine } from '../../../public/engine';
-
 let boardAPI;
 let engine;
 const value = ref(1200);
@@ -351,14 +350,14 @@ const selected_side= ref('')
 const selected_slot= ref('')
 const selected_master= ref({
   name:'R2-D2',
-  image_url : '/icons/r2-d2.jpg',
+  image_url :  `${useAppConfig().baseURL}icons/r2-d2.jpg`,
   timer : 600,
   isTimerRunning:false
 }
 )
 const selected_student= ref({
   name:'C3P0',
-  image_url : '/icons/c3p0.jpg',
+  image_url : `${useAppConfig().baseURL}icons/c3p0.jpg`,
   timer :600,
   isTimerRunning:false
 })
@@ -366,22 +365,22 @@ const selected_student= ref({
 const masters = ref([
   {
     name:'Yoda',
-    image_url:'/icons/yoda.jpg',
+    image_url:`${useAppConfig().baseURL}icons/yoda.jpg`,
     side: 'Jedi'
   },{
     name:'Palpatine',
-    image_url:'/icons/palpatine.jpg',
+    image_url:`${useAppConfig().baseURL}icons/palpatine.jpg`,
     side: 'Sith'
   },
 ])
 const students = ref([
   {
     name:'ObiWan',
-    image_url:'/icons/obiwan.png',
+    image_url:`${useAppConfig().baseURL}icons/obiwan.png`,
     side: 'Jedi'
   },{
     name:'Anakin',
-    image_url : '/icons/anakin.jpg',
+    image_url : `${useAppConfig().baseURL}/icons/anakin.jpg`,
     side:'Sith'
   }
 ])
@@ -403,11 +402,11 @@ const white_captured_pieces = ref([])
 const game_over_dialog= ref(false)
 const sides = ref([
   {
-  img_url:'/icons/jedi.png',
+  img_url:`${useAppConfig().baseURL}icons/jedi.png`,
   side_name:'Jedi'
 },
   {
-  img_url:'/icons/sith.png',
+  img_url:`${useAppConfig().baseURL}icons/sith.png`,
   side_name:'Sith'
 }
 ])
@@ -600,12 +599,12 @@ function handleMove() {
       if(selected_side.value=='Jedi'){
         game_over_details.value = {
           message:'Victory is thine',
-          link_url: '/animation/jedi_victory.gif'
+          link_url: `${useAppConfig().baseURL}animation/jedi_victory.gif`
         }
       }else{
          game_over_details.value = {
            message:'Victory is thine',
-          link_url: '/animation/sith_win.gif'
+          link_url: `${useAppConfig().baseURL}animation/sith_win.gif`
         }
       }
     }else{
@@ -614,12 +613,12 @@ function handleMove() {
       if(selected_side.value=='Jedi'){
         game_over_details.value = {
           message:msg,
-          link_url: '/animation/jedi_loss.gif'
+          link_url: `${useAppConfig().baseURL}animation/jedi_loss.gif`
         }
       }else{
         game_over_details.value = {
           message:msg,
-          link_url: '/animation/sith_loss.gif'
+          link_url: `${useAppConfig().baseURL}animation/sith_loss.gif`
         }
       }
     }
@@ -651,12 +650,12 @@ function startTimer(move) {
         if(selected_side.value=='Jedi'){
         game_over_details.value = {
           message:msg,
-          link_url: '/animation/jedi_loss.gif'
+          link_url: `${useAppConfig().baseURL}animation/jedi_loss.gif`
         }
       }else{
         game_over_details.value = {
            message:msg,
-          link_url: '/animation/sith_loss.gif'
+          link_url: `${useAppConfig().baseURL}animation/sith_loss.gif`
         }
       }
         game_over_dialog.value= true;
@@ -673,12 +672,12 @@ function startTimer(move) {
          if(selected_side.value=='Jedi'){
         game_over_details.value = {
           message:'Victory is thine',
-          link_url: '/animation/jedi_victory.gif'
+          link_url: `${useAppConfig().baseURL}animation/jedi_victory.gif`
         }
       }else{
          game_over_details.value = {
            message:'Victory is thine',
-          link_url: '/animation/sith_win.gif'
+          link_url: `${useAppConfig().baseURL}animation/sith_win.gif`
         }
       }
         game_over_details.value = true

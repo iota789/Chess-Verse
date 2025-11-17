@@ -1,5 +1,5 @@
 <template>
-<div class="flex flex-row justify-between md:gap-40 px-5 md:px-8 py-2  h-16.5  bg-white sticky top-0 z-100 items-center ">
+<div class="flex flex-row justify-between md:gap-40 px-1 md:px-8 py-2  h-16.5  bg-white sticky top-0 z-100 items-center ">
    <NuxtLink to="/">
     <div class="flex flex-row justify-between items-center">
 
@@ -23,7 +23,7 @@
     </div>
     <div class="block md:hidden">
 
-        <i class="pi pi-bars text-xl text-black" @click="toggle"></i>
+        <i class="pi pi-bars !text-xl text-black" @click="toggle"></i>
     </div>
     <Popover ref="PopoverRef" class="!bg-white !text-black">
     <div class="flex flex-col gap-2 ">
