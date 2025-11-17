@@ -3,7 +3,7 @@
    <NuxtLink to="/">
     <div class="flex flex-row justify-between items-center">
 
-        <img src="/icons/logo.png" alt="" class="w-16 h-16">
+        <img src="/Chess-Verse/icons/logo.png" alt="" class="w-16 h-16">
         <h1 class="text-black text-xl text-nowrap cursor-pointer">Chess Verse</h1>
     </div>
     </NuxtLink>

@@ -10,12 +10,12 @@
             <!-- <p class="text-black">{{ moves }}</p> -->
               <div class="flex flex-row items-center mt-2">
                 <div v-for="(item,index) in black_captured_pieces">
-                  <img src="/icons/pieces/white/rook.png" v-if="item=='r'"  alt="" class="w-6 h-6" >
-                  <img src="/icons/pieces/white/queen.png" v-if="item=='q'"  alt="" class="w-6 h-6" >
-                  <img src="/icons/pieces/white/king.png" v-if="item=='k'"  alt="" class="w-6 h-6" >
-                  <img src="/icons/pieces/white/knight.png" v-if="item=='n'"  alt="" class="w-6 h-6" >
-                  <img src="/icons/pieces/white/bishop.png" v-if="item=='b'"  alt="" class="w-6 h-6" >
-                  <img src="/icons/pieces/white/pawn.png" v-if="item=='p'"  alt="" class="w-6 h-6" >
+                  <img src="/Chess-Verse/icons/pieces/white/rook.png" v-if="item=='r'"  alt="" class="w-6 h-6" >
+                  <img src="/Chess-Verse/icons/pieces/white/queen.png" v-if="item=='q'"  alt="" class="w-6 h-6" >
+                  <img src="/Chess-Verse/icons/pieces/white/king.png" v-if="item=='k'"  alt="" class="w-6 h-6" >
+                  <img src="/Chess-Verse/icons/pieces/white/knight.png" v-if="item=='n'"  alt="" class="w-6 h-6" >
+                  <img src="/Chess-Verse/icons/pieces/white/bishop.png" v-if="item=='b'"  alt="" class="w-6 h-6" >
+                  <img src="/Chess-Verse/icons/pieces/white/pawn.png" v-if="item=='p'"  alt="" class="w-6 h-6" >
                 </div>
                 
               </div>
@@ -47,12 +47,12 @@
                <div class="flex flex-row items-center">
                 <div v-for="(item,index) in white_captured_pieces">
                   
-                  <img src="/icons/pieces/black/rook.png" v-if="item=='r'"  alt="" class="w-6 h-6" >
-                  <img src="/icons/pieces/black/queen.png" v-if="item=='q'"  alt="" class="w-6 h-6" >
-                  <img src="/icons/pieces/black/king.png" v-if="item=='k'"  alt="" class="w-6 h-6" >
-                  <img src="/icons/pieces/black/knight.png" v-if="item=='n'"  alt="" class="w-6 h-6" >
-                  <img src="/icons/pieces/black/bishop.png" v-if="item=='b'"  alt="" class="w-6 h-6" >
-                  <img src="/icons/pieces/black/pawn.png" v-if="item=='p'"  alt="" class="w-6 h-6" >
+                  <img src="/Chess-Verse/icons/pieces/black/rook.png" v-if="item=='r'"  alt="" class="w-6 h-6" >
+                  <img src="/Chess-Verse/icons/pieces/black/queen.png" v-if="item=='q'"  alt="" class="w-6 h-6" >
+                  <img src="/Chess-Verse/icons/pieces/black/king.png" v-if="item=='k'"  alt="" class="w-6 h-6" >
+                  <img src="/Chess-Verse/icons/pieces/black/knight.png" v-if="item=='n'"  alt="" class="w-6 h-6" >
+                  <img src="/Chess-Verse/icons/pieces/black/bishop.png" v-if="item=='b'"  alt="" class="w-6 h-6" >
+                  <img src="/Chess-Verse/icons/pieces/black/pawn.png" v-if="item=='p'"  alt="" class="w-6 h-6" >
                 </div>
               </div>
           </div>
