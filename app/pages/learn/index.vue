@@ -12,7 +12,7 @@
             An interactive board will show you exactly how it works.
           </p>
 
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mt-10 w-full px-20">
+          <div class="grid grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mt-10 w-full px-4 md:px-20">
             <div @click="()=>{
                 selected_data = item
                 showDialog=true;}"

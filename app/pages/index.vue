@@ -10,7 +10,7 @@
       <TheChessboard 
         :config="boardConfig" 
         @board-created="(ev)=>{boardCreated(ev);}"
-        class=" !w-64 !h-64 lg:!w-96 lg:!h-96  rounded-lg shadow-lg " />
+        class=" !w-64 !h-64 lg:!w-96 lg:!h-96  rounded-lg shadow-lg !pointer-events-none" />
 
       </div>
       <p class="text-black text-center text-sm lg:text-lg">{{ game_name }}</p>
@@ -25,8 +25,8 @@
            
               <img :src="item.image_url" alt="" class="w-16 h-16">
 
-           <p class="text-black text-xl font-semibold mt-3">{{ item.title }}</p>
-            <p class="text-black font-normal text-md text-gray-600 mt-3">{{ item.description }}</p>
+           <p class="text-black text-md md:text-lg font-semibold mt-3">{{ item.title }}</p>
+            <p class="text-black font-normal text-xs md:text-md text-gray-600 mt-3">{{ item.description }}</p>
           </div>
           <Button
           @click="()=>{
@@ -45,14 +45,14 @@
           <img :src="item.image_url" alt="" class="w-16 h-auto">
           <div class="flex flex-col">
 
-            <p class="text-black text-xl font-semibold mt-3">{{ item.title }}</p>
-            <p class="text-black font-normal text-md text-gray-600 mt-3">{{ item.description }}</p>
+            <p class="text-black text-md md:text-lg font-semibold mt-3">{{ item.title }}</p>
+            <p class="text-black font-normal text-xs md:text-md text-gray-600 mt-3">{{ item.description }}</p>
           </div>
           <Button 
           @click="()=>{
             $router.push(item.button_url)
           }"
-          class="!bg-transparent !p-0 !mt-3 transition-colors duration-200 !font-medium !text-blue-500 !border-none !rounded-md hover:bg-blue-300 hover:text-white">{{ item.button_label }}</Button>
+          class="!bg-transparent !p-0 !mt-3 !text-md transition-colors duration-200 !font-medium !text-blue-500 !border-none !rounded-md hover:bg-blue-300 hover:text-white">{{ item.button_label }}</Button>
         </div>
       </div>
       </div>

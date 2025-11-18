@@ -25,23 +25,25 @@
 
         <i class="pi pi-bars !text-xl text-black" @click="toggle"></i>
     </div>
-    <Popover ref="PopoverRef" class="!bg-white !text-black">
-    <div class="flex flex-col gap-2 ">
+    <Popover ref="PopoverRef" class="!bg-white !text-black w-48 h-auto"
+    :pt="{ content: { class: '!p-3' } }"
+    >
+    <div class="flex flex-col gap-2 items-center">
         <NuxtLink to="/play">
-        <div class="border-b ">
+        <div class=" ">
 
 
             <a class="text-black text-md cursor-pointer" :class="{'text-blue-500':$route.path=='/play'}">Play</a>
         </div>
     </NuxtLink>
     <NuxtLink to="/learn">
-        <div class="border-b ">
+        <div class=" ">
 
             <a class="text-black text-md cursor-pointer" :class="{'text-blue-500':$route.path=='/learn'}">Learn</a>
         </div>
     </NuxtLink>
     <NuxtLink to="/puzzles">
-        <div class="border-b ">
+        <div class=" ">
 
 
             <a  class="text-black text-md cursor-pointer" :class="{'text-blue-500':$route.path=='/puzzles'}">Puzzles</a>

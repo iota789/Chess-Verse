@@ -1,7 +1,7 @@
 <template>
   <div class="grid grid-cols-1 lg:grid-cols-[60%_1fr] p-3 lg:p-5 bg-[#f6f6f8] min-h-screen  gap-20">
     <div class="flex flex-col gap-2">
-      <div class="flex flex-row justify-between items-center mx-auto w-full max-w-[500px]">
+      <div class="flex flex-row justify-between items-center mx-auto w-full max-w-[450px]">
         <div class="flex flex-row gap-2">
           <img :src="selected_master.image_url" alt="" class="w-14 h-14 " >
           <div class="flex flex-col justify-between">
@@ -36,9 +36,9 @@
       @board-created="handleBoardCreated"
       @move="handleMove"
       :player-color="'white'"
-      class="!w-full !aspect-square  !max-w-[500px] !mx-auto"
+      class="!w-full !aspect-square  !max-w-[450px] !mx-auto"
       />
-       <div class="flex flex-row justify-between items-center mx-auto w-full max-w-[500px]">
+       <div class="flex flex-row justify-between items-center mx-auto w-full max-w-[450px]">
         <div class="flex flex-row gap-2">
 
           <img :src="selected_student.image_url" alt="" class="w-14 h-14 " >
@@ -266,10 +266,13 @@
 
            <Button class="w-auto !bg-blue-500 !text-white !font-semibold !p-2 !border-none "
            @click="()=>{
-            game_over_dialog = false;
-            selected_side = '';
-            selected_slot = '';
-            visible = true;
+            moves_list = [];
+        stopTimer()
+        boardAPI.resetBoard();
+        game_over_dialog = false;
+        selected_slot = '';
+        selected_side = '';
+        visible=true;
 
 }"  
            >
@@ -522,6 +525,7 @@ const studentTime =computed(()=>{
   return `${mins} : ${secs}`;
 }
 )
+
 
 
 const moves = computed(() => {

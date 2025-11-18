@@ -4,6 +4,15 @@ import Aura from '@primeuix/themes/aura';
 export default defineNuxtConfig({
   ssr: false, 
   app: {
+    head: {
+      title: "Chess Verse",
+      link: [
+        { rel: "icon", type: "image/png+xml", href: "/favicon.png" }
+      ],
+      script: [
+        { src: 'https://scripts.sirv.com/sirvjs/v3/sirv.js', defer: true },
+      ]
+    },
     baseURL: '/Chess-Verse/',   
     buildAssetsDir: 'assets'
   },
