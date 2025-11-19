@@ -25,7 +25,7 @@
         <div class="bg-white rounded-xl shadow-md  flex items-center px-4 h-10  text-black"
         :class="{
           'border-blue-500 border-2  text-blue-500':selected_master.isTimerRunning,
-          'border-red-500 border-2 text-black !bg-red-400': selected_master.isTimerRunning&&selected_master.timer<30
+         '!border-red-600 !border-2 !text-white !bg-red-500': selected_master.isTimerRunning&&selected_master.timer<30
         }"
 
         >
@@ -280,16 +280,7 @@
            >
         <i class="pi pi-plus text-white"></i>
         New Game
-       </Button>
-            <Button class="w-auto !bg-blue-500 !text-white !font-semibold !p-2 !border-none "
-            @click="()=>{
-
-              game_over_dialog=false;
-            }"
-            >
-        <i class="pi pi-search text-white"></i>
-        Review Game
-       </Button>
+      </Button>
           </div>
       </div>
     </Dialog> 
@@ -642,6 +633,7 @@ function stopTimer(move){
   }
 }
 
+
 function startTimer(move) {
   if(move=='student'){
     if(selected_student.value.isTimerRunning) return
@@ -649,7 +641,7 @@ function startTimer(move) {
     studentId = setInterval(() => {
       if (selected_student.value.timer > 0) {
         selected_student.value.timer--
-      } else {
+      } else if(!game_over_dialog.value&&!visible.value) {
         let message = master_victory.value.find(el=>el.side==selected_side.value);
       let msg = message.messages.at(Math.random()*10)
         if(selected_side.value=='Jedi'){
@@ -663,8 +655,8 @@ function startTimer(move) {
           link_url: `${base}/animation/sith_loss.gif`
         }
       }
-        game_over_dialog.value= true;
-        stopTimer()
+      game_over_dialog.value= true;
+      stopTimer()
       }
     }, 1000)
   }else{
@@ -673,7 +665,7 @@ function startTimer(move) {
      masterId = setInterval(() => {
       if ( selected_master.value.timer > 0) {
         selected_master.value.timer--
-      } else {
+      } else if(!game_over_dialog.value && !visible.value) {
          if(selected_side.value=='Jedi'){
         game_over_details.value = {
           message:'Victory is thine',
@@ -685,8 +677,8 @@ function startTimer(move) {
           link_url: `${base}/animation/sith_win.gif`
         }
       }
-        game_over_details.value = true
-        stopTimer()
+      game_over_details.value = true
+      stopTimer()
       }
     }, 1000)
   }
