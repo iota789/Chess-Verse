@@ -217,7 +217,6 @@ async function showOpening(item){
     selected_opening.value = item
     showOpeningDialog.value = true
     let moves = item.moves_list
-    console.log(moves)
     moves.forEach((el, index) => {
   setTimeout(() => {
     boardApi.move(el);

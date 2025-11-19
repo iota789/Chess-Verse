@@ -389,7 +389,6 @@ function handleMove(move){
             }
             let idx = current_puzzle.value.moves_formatted.findIndex(el=>!el.isCompleted)
             current_puzzle.value.moves_formatted[idx].isCompleted= true
-            console.log(current_puzzle.value.moves_formatted)
             let auto_move = current_puzzle.value.moves_formatted[idx+1]
             if(current_puzzle.value.moves_formatted.length == current_puzzle.value.moves_formatted.filter(el=>el.isCompleted).length){
               let puzzleIdx = puzzles.value.findIndex(el=> el.puzzleid==current_puzzle.value.puzzleid)
@@ -397,12 +396,9 @@ function handleMove(move){
               stopTimer()
               showCompletionDialog.value = true 
             rating.value = getRating()
-            console.log(rating.value)
               return
             }
             if(boardApi){
-                console.log(boardApi.getTurnColor())
-                console.log(boardApi.move({from:auto_move.from ,to:auto_move.to}))
                 current_puzzle.value.moves_formatted[idx+1].isCompleted=true
             }
             
@@ -479,7 +475,6 @@ function loadFen() {
   }else {
     filteredPuzzle = puzzles.value
   }
-  console.log(filteredPuzzle)
   puzzle = filteredPuzzle.at(Math.random()*filteredPuzzle.length)
   current_puzzle.value = puzzle
   if(selectedDifficulty.value==''){
@@ -501,9 +496,7 @@ function loadFen() {
       }) 
     })
   
-  console.log(puzzle)
   let fen = puzzle.fen
-  console.log(fen)
   if (boardApi) {
     let first_move = current_puzzle.value.moves_formatted[0]
     

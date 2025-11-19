@@ -219,6 +219,8 @@
     <Dialog :draggable="false" v-model:visible="visible" class="!bg-white !text-black !p-1 m-2 lg:m-0 w-full lg:!w-auto" modal :closable="false" v-on:after-hide="()=>{
        selected_student = students.find(el=>el.side==selected_side);
        selected_master = masters.find(el=>el.side==selected_side);
+       black_captured_pieces=[]
+       white_captured_pieces = []
        setTimer();
        startTimer('student');
     }">
@@ -317,6 +319,7 @@
             selected_slot = '';
             selected_side = '';
             visible= true;
+            boardAPI?.resetBoard();
           }"
           >
              <span v-if="selected_side=='Sith'">
@@ -506,7 +509,6 @@ function handleBoardCreated(boardApi) {
 function setTimer(){
   let parts=selected_slot.value.split(':').map(Number)
   // parts=parts.map(el=>el.trim())
-  console.log(parts)
   timer1.value = parts[0]
   timer2.value = parts[1]
   selected_student.value.timer = Math.round(timer1.value*60)
@@ -579,7 +581,6 @@ function handleMove() {
   }
 
   moves_list.value.push({'move':move?.san,'pgn':boardAPI?.getPgn(),'color':move.color})
-  console.log(moves_list.value)
   ply_count.value= ply_count.value+1;
   const moves = history?.map((move) => {
     if (typeof move === 'object') {

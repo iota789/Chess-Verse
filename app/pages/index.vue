@@ -212,7 +212,6 @@ function makeRandomMove() {
 }
 
 onMounted(() => {
-  console.log(useAppConfig())
   game_idx.value = Math.random()*classic_checkmate_games.length
   game_name.value = classic_checkmate_games.at(game_idx.value).game_name
 });
