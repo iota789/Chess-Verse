@@ -7,7 +7,7 @@ export default defineNuxtConfig({
     head: {
       title: "Chess Verse",
       link: [
-        { rel: "icon", type: "image/png", href: "/favicon.png" }
+        { rel: "icon", type: "image/png", href: "/Chess-Verse/favicon.png" }
       ],
       script: [
         { src: 'https://scripts.sirv.com/sirvjs/v3/sirv.js', defer: true },
