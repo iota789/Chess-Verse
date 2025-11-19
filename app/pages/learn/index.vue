@@ -48,7 +48,7 @@
               <img
                 :src="item.image_url"
                 alt=""
-                class="w-full md:w-32 h-auto object-cover rounded-lg border border-gray-200"
+                class="w-48 md:w-32 aspect-square object-cover rounded-lg border border-gray-200"
               />
               <div class="flex flex-col text-center md:text-left">
                 <h3 class="text-lg font-bold mb-1 text-[#111218]">
@@ -293,22 +293,22 @@ const chess_openings =ref([
 ])
 const more_data = ref([
     {
-        image_url:'https://lh3.googleusercontent.com/aida-public/AB6AXuA158xAH0Gz2c-6y7ouiFi8UgJz295tgmuiOcFwKhe2R7aKXR1FbLFt4EbsGP-Fu2ubCB_tAuIHiojVZ4weyD4TAIghhdPqen3lIxt_NKpnBy36vFSeCiGsY86qOW3ukBeI51H8iTmVv_jQVyfBRLhXKiLpMIyv2U7IzbLHMppzCtkT3agYJmicLmWt1ziK6KmiMERcR7xESrMpjdw42JnWI8leqc0ULa6miPV2Pe6Ckbv32kyX_bwPy74s0ll8-bYNyQlPZeZr6urX',
+        image_url:`${base}/icons/checkmate.jpg`,
         title: 'Checkmate',
         description:'This is the ultimate goal in chess. A king is in checkmate when it is under attack (in "check") and has no legal move to escape. The game ends, and the player delivering the checkmate wins.'
     },
     {
-        image_url:'https://lh3.googleusercontent.com/aida-public/AB6AXuAfSFfeU27xGlqHf1P4K1A2jgt-U4B5QWyYrir1XjtLtx6BNeuTUREqBmbxOqCONnCObqTsfrNmuj6L9PDa9-3vr0kosq0Sm50nYr3n9L5eWUUFxehRZ7uygQPvrlzdqkz9WcN1eyUjpGnR0iHkQiyJSBNPCN0LuTbpHxygwO2zCxY2KFcF3JenVgHL78YfEsQ_iELeSA-gt8ewcNYVY5BYWluh0TfvSu5gSK1ZZ1E5HS42i8VxgDvGrjR3LdKCdfeVPFK47xhii_9W',
+        image_url:`${base}/icons/stalemate.jpg`,
         title: 'Stalemate',
         description:'A stalemate occurs when a player is not in check but has no legal moves to make. The game ends in a draw, meaning neither player wins or loses.'
     },
     {
-        image_url:'https://lh3.googleusercontent.com/aida-public/AB6AXuDIUJGlu53ttne71zeUDNW8x01oCTrZzcb4lsEWIywSr9_IQki4uEygpFL8CHmdavDmIXwb-Bd72ERsjwPH19Ofv_-4TtwVZoCagaefYbHHBuHFSC6QujnXh2nkPAiw0i1IZUVYfpipqzZe1e0o-9VRO1zkUeVsKRoeAhLjqlOxa-fLVNcddibRIm3v9kP60OsWT7bUenx4Om9g1xVZnikDOqMTTpO6Kn0rDmXx1Eujk-0aw2OgAAID1o0W2LvBxqXwaEk-k501vY0W',
+        image_url:`${base}/icons/draw.png`,
         title: 'Draw',
         description:'Besides stalemate, a game can be a draw in several other ways, such as by mutual agreement, threefold repetition of a position, or the fifty-move rule (no captures or pawn moves in 50 moves).'
     },
     {
-        image_url:'https://lh3.googleusercontent.com/aida-public/AB6AXuBJoc3SlfNuj5888riws7I_KdmaY-UAspRzYzK2WRVvjz9VkZUgKDzAG8ePQx-_xHNHLbkUSCwKkfJHrJh5YUvmpMZMvzmw4vYswPwgrNx3oH2t6-l71YQIiqx8DlYTZ6Ggjrf8vw4chWI_3f1DDnHuUY-UUnz1k9EkZ72vVbXDa2-r9OoHeGRuEhbSC6cwat3PTVSf2e7bTPNXDg7PdwD3Tj1y1ccBIrOhWUB6HgaDpw-6D9WBzNP9LAH6UecShM1ELZTbK7nVrHgh',
+        image_url:`${base}/icons/resign.jpg`,
         title: 'Resign',
         description:"A player may choose to resign if they believe their position is hopeless. This immediately ends the game, and the opponent wins. It's a sign of good sportsmanship to know when to resign."
     },
