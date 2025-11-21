@@ -103,7 +103,7 @@
       
       <div class="w-full flex flex-col gap-7 justify-center items-center">
         <div class="flex flex-col items-center">
-           <DotLottieVue style="height: 200px; width: 1500px" autoplay loop src="animation/Success.lottie" />
+           <DotLottieVue style="height: 200px; width: 1500px" autoplay loop :src="`${base}/animation/Success.lottie`" />
 
           <p class="text-2xl font-bold text-black text-center" >Puzzle Solved!!</p>
           <p class="text-md font-bold text-gray-800 mt-3" >Great job on finding the right move</p>
@@ -197,6 +197,7 @@ import "vue3-chessboard/style.css";
 import { filter } from '@primeuix/themes/aura/datatable';
 const showDialog = ref(false)
 const showCompletionDialog = ref(false)
+const base = useRuntimeConfig().app.baseURL
 const pageRef = ref(null)
 const seconds = ref(0)
 let timer = null
