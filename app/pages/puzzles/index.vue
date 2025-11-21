@@ -399,6 +399,8 @@ function handleMove(move){
               return
             }
             if(boardApi){
+            boardApi.getTurnColor()
+                boardApi.move({from:auto_move.from ,to:auto_move.to})
                 current_puzzle.value.moves_formatted[idx+1].isCompleted=true
             }
             

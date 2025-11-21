@@ -220,6 +220,7 @@
        selected_student = students.find(el=>el.side==selected_side);
        selected_master = masters.find(el=>el.side==selected_side);
        black_captured_pieces=[]
+       moves_list = []
        white_captured_pieces = []
        setTimer();
        startTimer('student');
@@ -310,6 +311,7 @@
             selected_slot = '';
             selected_side = '';
             visible= true;
+            moves_list = [];
             boardAPI?.resetBoard();
           }"
           >
